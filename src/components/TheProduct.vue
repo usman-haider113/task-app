@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <template v-if="!filteredData">
+    <template v-if="!filterData">
       <v-col cols="12" sm="6" lg="4" v-for="(index, i) in product" :key="i">
         <v-hover v-slot="{ isHovering, props }">
           <v-card
@@ -100,7 +100,6 @@ export default defineComponent({
   },
   mounted() {
     store.dispatch("fetchProducts");
-    this.filteredData = this.filterData;
   },
   computed: {
     product(): any {
