@@ -59,7 +59,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-@media (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .the-categories {
     display: none;
   }
